@@ -1,0 +1,2 @@
+17/7/2023
+- Encounter an issue regarding mongodb connection error. Turns out solution to be using db url from localhost to 127.0.0.1. It works

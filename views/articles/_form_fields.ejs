@@ -1,0 +1,21 @@
+<div class="form-group">
+    <label for="title">Title</label>
+    <% if(locals.article){ %>
+    <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control mb-2">
+    <% } else { %>
+    <input required type="text" name="title" id="title" class="form-control mb-2">
+    <% } %>
+</div>
+
+<div class="form-group">
+    <label for="desc">Description</label><br>
+    <textarea type="text" name="desc" id="desc" class="form-control mb-2"><% if(locals.article){ %><%= article.description %><% } %></textarea>
+</div>
+
+<div class="form-group">
+    <label for="markdown">Markdown</label><br>
+    <textarea required type="text" name="markdown" id="markdown" class="form-control mb-2"><% if(locals.article){ %><%= article.markdown %> <% } %></textarea>
+</div>
+
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>
